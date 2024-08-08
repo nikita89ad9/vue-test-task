@@ -1,0 +1,81 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import { mock } from '@/pages/Article/mock';
+import BaseDivider from '@/components/common/BaseDivider/BaseDivider.vue';
+import ArticleComments from './ArticleComments.vue';
+import ArticleInput from '../../ArticleInput/ArticleInput.vue';
+import ArticleRepliesModal from '../../ArticleReplies/ArticleRepliesModal/ArticleRepliesModal.vue';
+import ArticleCommentItem from '../ArticleCommentItem/ArticleCommentItem.vue';
+
+describe('ArticleComments', () => {
+  const wrapper = mount(ArticleComments, {
+    global: {
+      components: {
+        ArticleCommentItem,
+        BaseDivider,
+        ArticleInput,
+        ArticleRepliesModal,
+      },
+    },
+    props: {
+      content: mock.articleComments.content,
+      total: mock.articleComments.total,
+    },
+  });
+  const prop = mock.articleComments;
+
+  it('should render ArticleComments', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  describe('Heading', () => {
+    const heading = wrapper.find('.comments__heading');
+
+    it('should render heading', () => {
+      expect(heading.exists()).toBe(true);
+    });
+
+    it('should pass amount of comments from props', () => {
+      expect(heading.text()).toBe(`Comments: ${prop.total}`);
+    });
+  });
+
+  describe('comments content', () => {
+    const content = wrapper.findAll('.comments__content');
+
+    it('should render proper amount of comments', () => {
+      expect(content.length).toBe(prop.content.length);
+    });
+
+    it('should render proper amount of dividers', () => {
+      const dividers = wrapper.findAllComponents(BaseDivider);
+
+      expect(dividers.length).toBe(content.length - 1);
+    });
+
+    describe('comments items', () => {
+      const items = wrapper.findAllComponents(ArticleCommentItem);
+
+      it('should render proper amount of items', () => {
+        expect(items.length).toBe(content.length);
+      });
+
+      it('should pass peoper props in the items', () => {
+        items.forEach((el, index) => {
+          expect(el.props('commentItem')).toStrictEqual(prop.content[index]);
+          expect(el.props('commentIndex')).toBe(index);
+        });
+      });
+    });
+  });
+
+  describe('modal window', () => {
+    const modal = wrapper.findComponent(ArticleRepliesModal);
+
+    it('modal should be closed by default', () => {
+      expect(modal.exists()).toBe(false);
+    });
+  });
+});

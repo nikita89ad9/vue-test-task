@@ -1,0 +1,28 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: atlassian/default-image:3
+
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          name: Installing dependencies....
+          script:
+            - npm install
+            - npm run test:eslint
+            - npm run test:prettier
+            - npm run test:stylelint
+      - step:
+          name: Building...
+          script:
+            - npm install
+            - npm i npm-run-all
+            - npm install -D sass
+            - npm run build
+          artifacts:
+            - node_modules/**
+            - dist/**
+            - index.js

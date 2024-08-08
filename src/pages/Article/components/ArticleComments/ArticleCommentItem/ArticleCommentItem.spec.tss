@@ -1,0 +1,115 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import { mock } from '@/pages/Article/mock';
+import Date from '@/components/Date/Date.vue';
+import IconWrapper from '@/components/IconWrapper.vue';
+import UserBadge from '@/components/UserBadge/UserBadge.vue';
+import ArticleCommentItem from './ArticleCommentItem.vue';
+
+describe('Comment item', () => {
+  const wrapper = mount(ArticleCommentItem, {
+    global: {
+      components: {
+        UserBadge,
+        Date,
+        IconWrapper,
+      },
+    },
+    props: {
+      commentIndex: '1',
+      commentItem: mock.articleComments.content[0],
+    },
+  });
+  const prop = mock.articleComments.content[0];
+
+  it('should render comment item', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  describe('badge', () => {
+    const badge = wrapper.findComponent(UserBadge);
+
+    it('should render user badge', () => {
+      expect(badge.exists()).toBe(true);
+    });
+
+    it('should render prop data', () => {
+      expect(badge.text()).toBe(prop.created.authorName);
+    });
+  });
+
+  describe('date', () => {
+    const date = wrapper.findComponent(Date);
+
+    it('should render date component', () => {
+      expect(date.exists()).toBe(true);
+    });
+
+    it('should pass date prop', () => {
+      expect(date.props('utcDate')).toBe(prop.created.date);
+    });
+  });
+
+  describe('comment text', () => {
+    const comment = wrapper.find('.comment__content');
+
+    it('should render comment', () => {
+      expect(comment.exists()).toBe(true);
+    });
+
+    it('should set comment text from prop', () => {
+      expect(comment.text()).toBe(prop.commentText);
+    });
+  });
+
+  describe('comment likes', () => {
+    const likeWrapper = wrapper.find('.likes');
+    const likeIcon = likeWrapper.findComponent(IconWrapper);
+    const likeCount = likeWrapper.find('.comment__actions-item__count');
+
+    it('should render likes', () => {
+      expect(likeWrapper.exists()).toBe(true);
+    });
+
+    it('should render like icon svg', () => {
+      expect(likeIcon.html()).toContain('</i>');
+    });
+
+    it('should render like count', () => {
+      expect(likeCount.exists()).toBe(true);
+    });
+
+    it('should pass likes count from props', () => {
+      expect(likeCount.text()).toBe(String(prop.metrics.likes));
+    });
+  });
+
+  describe('comment replies', () => {
+    const repliesWrapper = wrapper.find('.replies');
+    const repliesCount = repliesWrapper.find('.comment__actions-item__count');
+
+    it('should render comment replies', () => {
+      expect(repliesWrapper.exists()).toBe(true);
+    });
+
+    it('should render amount of replies or just reply', () => {
+      if (prop.replies.length > 0) {
+        expect(repliesCount.text()).toBe(`Replies : ${prop.replies.length}`);
+      } else {
+        expect(repliesCount.text()).toBe('Reply');
+      }
+    });
+
+    it('should emit number of replies', async () => {
+      await repliesWrapper.trigger('click');
+
+      const emitted = wrapper.emitted('replyModal');
+      expect(emitted).toBeTruthy();
+
+      const emitValue = emitted as unknown[][];
+      expect(emitValue[0]).toEqual([1]);
+    });
+  });
+});

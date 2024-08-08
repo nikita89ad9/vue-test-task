@@ -1,0 +1,41 @@
+// import { describe, expect, it, vi } from 'vitest';
+
+// import { mount } from '@vue/test-utils';
+
+// import { getElementRect } from '@utils/getElementRect'; // eslint-disable-line @typescript-eslint/no-unused-vars
+// import SectionsPage from './SectionsPage.vue';
+
+// describe('Sections', () => {
+//   vi.mock('@utils/getElementRect', () => {
+//     const rect = {
+//       x: 0,
+//       y: 0,
+//       width: 0,
+//       height: 0,
+//       top: 0,
+//       right: 0,
+//       bottom: 0,
+//       left: 0,
+//     };
+//     const value = vi.fn().mockResolvedValue(rect);
+//     return {
+//       getElementRect: value,
+//     };
+//   });
+
+//   const wrapper = mount(SectionsPage);
+//   const headers = wrapper.find('.headers');
+//   const item = wrapper.find('.section-item');
+
+//   it('Renders properly', () => {
+//     expect(wrapper.exists()).toBeTruthy();
+//   });
+
+//   it('Renders header', () => {
+//     expect(headers.exists()).toBeTruthy();
+//   });
+
+//   it('Renders items', () => {
+//     expect(item.exists()).toBeTruthy();
+//   });
+// });

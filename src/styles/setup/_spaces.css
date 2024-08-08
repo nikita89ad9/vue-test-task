@@ -1,0 +1,20 @@
+:root {
+  /* Indent */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-sm: 14px;
+  --space-m: 16px;
+  --space-ml: 18px;
+  --space-l: 20px;
+  --space-xl: 24px;
+  --space-2xl: 28px;
+  --space-3xl: 32px;
+  --space-4xl: 36px;
+  --space-5xl: 44px;
+  --space-6xl: 64px;
+
+  /* Borders */
+  --space-border-xs: 8px;
+  --space-border-s: 10px;
+}

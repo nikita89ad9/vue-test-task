@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run precommit
+
+# TODO: move type and unit tests to CI
+npm run test:type-check
+npm run test:unit-once

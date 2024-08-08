@@ -1,0 +1,628 @@
+{
+  "general": {
+    "error": "Input error",
+    "welcome": "Welcome to",
+    "latestArticles": "Latest articles",
+    "latestArticlesText": "",
+    "latestMeetups": "Latest meetups",
+    "latestMeetupsText": "",
+    "topics": "Topics",
+    "topicsText": "",
+    "authors": "Subscribe to our authors",
+    "authorsText": "",
+    "wantToBeAnAuthor": "Want to become an author yourself?",
+    "startNow": "Start now!",
+    "articles": "Articles",
+    "subscribers": "Subscribers",
+    "subscribe": "Subscribe",
+    "unsubscribe": "Unsubscribe",
+    "subscribed": "You are subscribed",
+    "displayed": "Displayed",
+    "items": "Items",
+    "sortedBy": "Sorted by",
+    "newArticle": "New article",
+    "searchNotFound": "Unfortunately, no results match your search criteria",
+    "notFound": "Nothing is found",
+    "search": "Search",
+    "cancel": "Cancel"
+  },
+  "navigation": {
+    "showing": "Showing",
+    "outOf": "out of"
+  },
+  "notifications" : {
+    "title": "Notifications",
+    "reference": "In response to",
+    "noItems": "You do not have any notifications yet",
+    "markAsRead": "Mark all as read",
+    "comments": "Comments"
+  },
+  "faq": {
+    "title": "FAQ",
+    "generalInfo": {
+      "title": "What is this website for?",
+      "text": "This website serves as blogging platform with elements of a social network, in which every user can create articles, add recorded meetups, share thoughts with other people or just save links to interesting and educational content."
+    },
+    "newArticle": {
+      "title": "How to create a new article?",
+      "text": "To create a new article first you need to press 'New article' button. You will be redirected to the new article page. There you will see a panel with all the options for text formatting and area for text input. After you finished typing press the 'Next' button or click on a next item in the timeline. Next step is to fill all the necessary information  for the article, such as title, short description, section, in which article will be published. You also need to upload article preview and select appropriate tags. After this, press the 'Next' button again. You will see the article preview, how it will look like for other users. You have two options: publish article right now or save it to your drafts, so you will be able to finish it later. If you want to apply some changes to article before publishing it, you can always use 'Prev' and 'Next' buttons for navigation, or use timeline for this purpose. All your progress wil be saved."
+    },
+    "isFree": {
+      "title": "Are users without paid plan able to use this portal?",
+      "text": "Yes, they are. Users, which didn't purchase a paid plan are able to use this portal as everyone else with limited functionality. The only distinction will be availability of some articles and meetups."
+    },
+    "techProblems": {
+      "title": "I have problems with an access to the portal features, who can I refer to?",
+      "text": "To contact a technical support, click corresponding option on sidebar, fill out the form and send it. Our technical support team will contact you later to solve you problem."
+    }
+  },
+  "auth": {
+    "submit": "Submit",
+    "login": "Email",
+    "password": "Password",
+    "newPassword": "New password",
+    "repPassword": "Repeat password",
+    "repNewPassword": "Repeat new password",
+    "dontHaveAcc": "Don't have an account?",
+    "alreadyHaveAcc": "Already have an account?",
+    "noPass": "Password is needed",
+    "invalidPass": "Password is too short",
+    "noEmail": "Email is needed",
+    "invalidEmail": "Incorrect email",
+    "passNoMatch": "Password and confirmation are no the same",
+    "lengthErr": "Value is too long",
+    "postfix": {
+      "chatWithCollegues": "Chat with colleagues",
+      "relevantArticles": "Browse most relevant articles",
+      "helpfulArticles": "Share helpful articles and posts"
+    }
+  },
+  "messages": {
+    "start": "Choose existing chat, or start new",
+    "title": "Chats",
+    "createChat": "Create a new chat",
+    "startChat": "Start chat",
+    "enterMessage": "Enter message",
+    "searchUsers": "Search for users",
+    "search": "Search for user or message",
+    "openMenu": "Open menu",
+    "openSettings": "Open settings",
+    "send": "Send message",
+    "placeholder": "Your message here",
+    "chatMenu": {
+      "block": "Block",
+      "delete": "Delete"
+    }
+  },
+  "moderation": {
+    "articles": {
+      "approveAll": "Approve all",
+      "rejectAll": "Reject all",
+      "total": "Articles in total:",
+      "selected": "selected",
+      "selectAll": "Select all articles",
+      "panel": {
+        "status": "Status",
+        "sections": "Sections",
+        "tags": "Tags",
+        "search": "Search for articles"
+      },
+      "item": {
+        "title": "Title",
+        "author": "Author",
+        "section": "Section",
+        "date": "Date",
+        "status": "Status",
+        "select": "Select article",
+        "approve": "Approve",
+        "reject": "Reject"
+      }
+    },
+    "comments": {
+      "responseTo": "In response to",
+      "blockUser": "Block user",
+      "confirmBlock": "Are you sure you want to block this user?",
+      "deleteComment": "Delete comment",
+      "confirmDelete": "Are you sure you want to delete this comment?",
+      "selectAll": "Select all comments",
+      "total": "Сomments in total:",
+      "panel": {
+        "search": "Search for comments",
+        "sortOptions": {
+          "newest": "Newest",
+          "oldest": "Oldest"
+        },
+        "dateOptions": {
+          "all": "All time",
+          "week": "This week",
+          "month": "This month",
+          "year": "This year"
+        }
+      }
+    },
+    "reports" : {
+      "viewArticle": "View article",
+      "rejectArticle": "Reject article",
+      "blockUser": "Block article author",
+      "panel": {
+        "search": "Search for reports",
+        "sortOptions": {
+          "newest": "Newest",
+          "oldest": "Oldest"
+        },
+        "dateOptions": {
+          "all": "All time",
+          "week": "Last week",
+          "month": "Last month",
+          "year": "Last year"
+        }
+      }      
+    },
+    "tabs": {
+      "articles": "Articles",
+      "comments": "Comments",
+      "reports": "Reports"
+    }
+  },
+  "editor": {
+    "options": {
+      "undo": "Undo",
+      "redo": "Redo",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "subscript": "Subscript",
+      "superscript": "Superscript",
+      "align": "Set text align",
+      "left": "Align left",
+      "center": "Center",
+      "right": "Align right",
+      "justify": "Justify",
+      "orderedList": "Ordered list",
+      "bulletList": "Bullet list",
+      "code": "Insert code",
+      "codeblock": "Insert codeblock",
+      "addLink": "Add link",
+      "removeLink": "Remove link",
+      "divider": "Add dividing line",
+      "paragraph": "Paragraph",
+      "heading": "Set heading",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "heading5": "Heading 5",
+      "heading6": "Heading 6",
+      "blockquote": "Blockquote",
+      "reset": "Reset all styling",
+      "resetPrompt": "Are you sure you want to reset all styling for current article?",
+      "resetConfirm": "Yes, reset all",
+      "resetAbort": "No, take me back",
+      "emoji": "Add emoji",
+      "table": {
+        "add": "Add table",
+        "colBefore": "Add column before",
+        "colAfter": "Add column after",
+        "colDelete": "Delete column",
+        "rowBefore": "Add row before",
+        "rowAfter": "Add row after",
+        "rowDelete": "Delete row",
+        "cellMerge": "Merge cells",
+        "cellSplit": "Split cells",
+        "deleteTable": "Delete table",
+        "createTable": "Create table",
+        "rows": "Rows",
+        "cols": "Cols",
+        "withHeader": "Append header"
+      },
+      "video": {
+        "add": "Add video from Youtube",
+        "delete": "Delete video",
+        "input": "Provide video URL",
+        "submit": "Submit video",
+        "errInput": "Please provide valid Youtube link!",
+        "successInput": "Video uploaded!",
+        "height": "Set height",
+        "width": "Set width",
+        "aspectRatio": "Preserve aspect ratio"
+      },
+      "image": {
+        "add": "Add image",
+        "delete": "Delete image",
+        "placeholder": "Drop a new image here, or click to select file to upload.",
+        "input": "Provide image URL",
+        "submit": "Submit image",
+        "errType": "Incorrect input type! Please provide file with correct extension!",
+        "errInput": "Please provide valid link or upload an image",
+        "successInput": "Image uploaded!",
+        "height": "Set height",
+        "width": "Set width"
+      }
+    },
+    "controls": {
+      "stepCreate": "Write an article",
+      "stepSettings": "Apply settings",
+      "stepPublish": "Publish article",
+      "next": "Next",
+      "back": "Back",
+      "create": "Create an article",
+      "preview": "Article preview",
+      "image": "Add image for article preview",
+      "section": "Select section, in which article will be published",
+      "topics": "Select topics for article, so readers know what your story is about",
+      "publishArticle": "Publish article",
+      "saveToDrafts": "Save to drafts",
+      "form": {
+        "title": "Article title",
+        "description": "Article description",
+        "section": "Select section",
+        "topics": "Select topics"
+      }
+    },
+    "select": {
+      "placeholder": "Select tags",
+      "search": "Search tags",
+      "noItems": "No items match your search",
+      "add": "Add tag",
+      "delete": "Delete tag",
+      "selected": "Tags selected"
+    },
+    "wordsCount": "Words",
+    "saveToDrafts": "Save to drafts",
+    "publishArticle": "Publish article"
+  },
+  "admin": {
+    "tabs": {
+      "users": "Users",
+      "articles": "Articles",
+      "meetups": "Meetups",
+      "sections": "Sections",
+      "tags": "Tags",
+      "departments": "Departments",
+      "jobTitles": "Job titles",
+      "professionalLevels": "Professional levels",
+      "subscriptions": "Subscriptions",
+      "faq": "FAQ",
+      "dashboard": "Dashboard",
+      "buttons": {
+        "article": "Create article",
+        "meetup": "Create meetup",
+        "user": "Create user",
+        "section": "Create section",
+        "tag": "Create tag",
+        "department": "Create department",
+        "jobTitle": "Create job title",
+        "professionalLevel": "Create level",
+        "subscription": "Create subscription plan",
+        "faq": "Create question"
+      }
+    },
+    "tableMenu": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "forms": {
+      "create": {
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "password": "Password",
+        "department": "Department"
+      },
+      "update": {
+        "name": "Name",
+        "surname": "Surname",
+        "department": "Department",
+        "jobTitle": "Job Title",
+        "professionalLevel": "Professional Level",
+        "avatarUrl": "Avatar Url"
+      }
+    },
+    "sectionForm": {
+      "name": "Name",
+      "description": "Description",
+      "preview": "Preview"
+    },
+    "tagForm": {
+      "name": "Tag name"
+    },
+    "departmentForm": {
+      "name": "Department name"
+    },
+    "jobTitleForm": {
+      "name": "Job title"
+    },
+    "professionalLevelForm": {
+      "name": "Professional level"
+    },
+    "articleForm": {
+      "title": "Title",
+      "description": "Description",
+      "content": "Content",
+      "section": "Section",
+      "preview": "Preview",
+      "department": "Department",
+      "jobTitle": "Job title",
+      "professionalLevel": "Professional level"
+    },
+    "meetupForm": {
+      "title": "Title",
+      "description": "Description",
+      "section": "Section",
+      "preview": "Preview",
+      "url": "Meetup URL",
+      "tags:": "Select tags",
+      "isPublished": "Is published",
+      "participants": "Participants",
+      "state": {
+        "published": "Published",
+        "hidden": "Hidden"
+      }
+    },
+    "userCreateForm": {
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "password": "Password",
+      "department": "Department"
+    },
+    "userUpdateForm": {
+      "name": "Name",
+      "surname": "Surname",
+      "department": "Department",
+      "jobTitle": "Job Title",
+      "professionalLevel": "Professional Level",
+      "avatar": "Avatar Url"
+    }
+  },
+  "headerMenu": {
+    "profile": "Profile",
+    "sections": "Sections",
+    "becomeMember": "Become a member",
+    "settings": "Settings",
+    "signOut": "Sign out"
+  },
+  "multiselect": {
+    "selectAll": "Select All",
+    "outOf": "Out of",
+    "reset": "Reset",
+    "noItems": "No items found"
+  },
+  "table": {
+    "tableHeader": {
+      "articleID": "Article ID",
+      "actions": "Actions",
+      "authorEmail": "Author email",
+      "authorName": "Author",
+      "created": "Created",
+      "department": "Department",
+      "description": "Description",
+      "discount": "Discount",
+      "email": "Email",
+      "features": "Features",
+      "id": "ID",
+      "jobTitle": "Job title",
+      "moderator": "Moderator",
+      "name": "Name",
+      "price": "Price",
+      "professionalLevel": "Professional level",
+      "published": "Published",
+      "registeredOn": "Registered on",
+      "role": "Role",
+      "section": "Section",
+      "status": "Status",
+      "subtitle": "Subtitle",
+      "surname": "Surname",
+      "title": "Title",
+      "updatedAt": "Updated at",
+      "submittedBy": "Submitted by",
+      "link": "Link",
+      "category": "Category"
+    },
+    "markAsSelected": "Select item",
+    "markAsResolved": "Mark as resolved",
+    "unmark": "Unmark"
+  },
+  "sidebar": {
+    "siteLinks": {
+      "admin": "Admin Panel",
+      "mainPage": "Main",
+      "articles": "Articles",
+      "meetups": "Meetups",
+      "favs": "Favourites",
+      "authors": "Authors",
+      "messages": "Messages"
+    },
+    "supportLinks": {
+      "techSupport": "Tech Support"
+    }
+  },
+  "articles": {
+    "replies": "Replies",
+    "reply": "Reply",
+    "favourites": "readers added this article to favourites",
+    "recommended": "Recommended for you",
+    "articles": "Articles",
+    "sortedBy": "Sorted by",
+    "sortOptions": {
+      "author": "author",
+      "date": "date",
+      "title": "title"
+    },
+    "noResults": "No articles match your criteria",
+    "reportForm": {
+      "category": "Reason",
+      "description": "Description",
+      "submit":"Submit report",
+      "categories": {
+        "general": "General",
+        "nsfw": "NSFW content",
+        "harassment": "Harassment"
+      }
+    },
+    "report": "Report article",
+    "favorite": "Add to favorites",
+    "placeholders": {
+      "jobTitle": "Job title",
+      "departments": "Departments",
+      "authors": "Authors",
+      "topics": "Topics",
+      "tags": "Tags",
+      "search": "Search",
+      "shareYourOpinion": "Share your opinion"
+    },
+    "toasts": {
+      "created": "Article published!",
+      "saved": "Saved to drafts",
+      "deleted": "Article deleted"
+    },
+    "comments": {
+      "title": "Comments",
+      "delete": "Delete",
+      "edit": "Edit",
+      "confirm_deletion": "Are you sure you want to delete this comment?",
+      "leave_a_comment": "Leave your comment here",
+      "noComments": "No comments yet"
+    }
+  },
+
+  "authors": {
+    "title": "Authors",
+    "sortedBy": "Sorted by",
+    "sortOptions": {
+      "name": "name",
+      "date": "date",
+      "surname": "surname"
+    },
+    "noResults": "No authors found"
+  },
+  "profile": {
+    "subscribedToTopics": "Subscribed to topics",
+    "subscribedToAuthors": "Subscribed to authors",
+    "subscribedToSections": "Subscribed to sections",
+    "edit": "Edit profile",
+    "profileName": "Profile Name",
+    "panel": {
+      "description": "Profile",
+      "favorites": "Favourites",
+      "articles": "My articles",
+      "drafts": "Drafts"
+    },
+    "badge": {
+      "depart": "Department",
+      "notYet": "Not setted yet",
+      "profLvl": "Proffesional level",
+      "jobTitle": "Job title",
+      "userRole": "User role",
+      "registered": "Registered",
+      "accountPlan": "Account Plan"
+    },
+    "role": {
+      "user": "User",
+      "moder": "Moderator",
+      "admin": "Administrator"
+    },
+    "update": {
+      "name": "Name",
+      "surname": "Surname",
+      "department": "Department",
+      "jobTitle": "Job Title",
+      "professionalLevel": "Professional Level",
+      "avatarUrl": "Avatar URL"
+    },
+    "noArticles": "It seems like you haven't published any articles yet",
+    "noDrafts": "Your drafts are empty"
+  },
+  "favs": {
+    "favs": "Favourites"
+  },
+  "errorCodes": {
+    "400": "An error occured! Please check out input data",
+    "401": "Invalid password",
+    "403": "Access is forbidden",
+    "404": "Resource is not found",
+    "405": "Method not allowed",
+    "408": "The server timed out waiting for the request",
+    "409": "Request could not be processed because of conflict with the current resource state",
+    "410": "Requested resource is no longer available",
+    "500": "Internal server error",
+    "501": "Request method could not be executed",
+    "502": "Bad gateway",
+    "503": "Server is not available",
+    "504": "Server did not receive response in time"
+  },
+  "subs": {
+    "getAccess": "Get unresctricted access to premium content",
+    "unlimFavs": "Unlimited \"Favourite\" list",
+    "activityNotions": "Your subscription`s activity notifications",
+    "liveMeetups": " Ability to attend live meetups as a spectator",
+    "subs": "50 user and 25 topic subscriptions",
+    "unrestComments": "Untrestricted amount of comments"
+  },
+  "settings": {
+    "account": "Account",
+    "appearance": "Appearance",
+    "notifications": "Notifications",
+    "appearanceSetting": "Appearance Settings",
+    "chooseUrTheme": "Choose you theme",
+    "notificationSetting": "Notification settings",
+    "accountSettings": "Account settings",
+    "notificationSettings": {
+      "publicComments": "For comments to my publications",
+      "favComments": "For comments to publications in my favorite list",
+      "commentReplies": "For replies to my comments",
+      "newMsg": "For new messages",
+      "webUpdates": "For important website updates"
+    },
+    "appearanceSettings": {
+      "dark": "Dark",
+      "light": "Light",
+      "default": "System"
+    }
+  },
+  "sections": {
+    "sections": "Sections",
+    "name": "Name",
+    "articles": "Articles",
+    "subscribers": "Subscribers",
+    "sortedBy": "Sorted by",
+    "noItems": "No items for display",
+    "sortOptions": {
+      "name": "name",
+      "articles": "popularity",
+      "subscribers": "subscribers"
+    }
+  },
+  "dashboard": {
+    "summary": "Summary",
+    "usersStat": "Users Statistics",
+    "articleStat": "Articles Statictics",
+    "statsBlock": {
+      "usersReg": "Users registered",
+      "articlesWritten": "Articles written",
+      "totalSections": "Total sections",
+      "meetups": "Meetups held"
+    }
+  },
+  "meetups": {
+    "lastMeetups": "Last Meetup / Live Now",
+    "recommendations": "Recommendations",
+    "title": "Meetups",
+    "videoError": "Unable to render videoplayer"
+  },
+  "techSupport": {
+    "contactSupport": "Contact Support",
+    "addPic": "Add picture",
+    "cancel": "Cancel",
+    "upload": "Upload",
+    "delMsg": "All content of your message would be delete FOREVER.",
+    "continue": "Continue?",
+    "send": "Send",
+    "no": "No",
+    "yes": "Yes",
+    "placeholders": {
+      "topic": "Topic"
+    }
+  }
+}

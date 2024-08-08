@@ -1,0 +1,18 @@
+import { createPinia, setActivePinia } from 'pinia';
+import { beforeEach, describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import MeetupsPage from './MeetupsPage.vue';
+
+describe('MeetupsPage', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia());
+  });
+
+  const wrapper = mount(MeetupsPage);
+
+  it('should be rendered', () => {
+    expect(wrapper.exists()).toBeTruthy();
+  });
+});

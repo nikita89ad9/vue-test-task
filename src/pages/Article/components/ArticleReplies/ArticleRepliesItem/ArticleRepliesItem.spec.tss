@@ -1,0 +1,79 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import ArticleRepliesItem from '@pages/Article/components/ArticleReplies/ArticleRepliesItem/ArticleRepliesItem.vue';
+import { mock } from '@/pages/Article/mock';
+import Date from '@/components/Date/Date.vue';
+import IconWrapper from '@/components/IconWrapper.vue';
+import UserBadge from '@/components/UserBadge/UserBadge.vue';
+
+describe('Article replies item', () => {
+  const prop = mock.articleComments.content[0].replies[0];
+  const wrapper = mount(ArticleRepliesItem, {
+    global: {
+      components: {
+        Date,
+        UserBadge,
+        IconWrapper,
+      },
+    },
+    props: {
+      created: prop.created,
+      likes: prop.likes,
+      replyText: prop.replyText,
+    },
+  });
+
+  it('should render replies item', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  describe('user badge', () => {
+    const badge = wrapper.findComponent(UserBadge);
+
+    it('should render badge item', () => {
+      expect(badge.exists()).toBe(true);
+    });
+
+    it('should pass name prop', () => {
+      expect(badge.text()).toBe(prop.created.authorName);
+    });
+  });
+
+  describe('creation date', () => {
+    const date = wrapper.findComponent(Date);
+
+    it('should render date component', () => {
+      expect(date.exists()).toBe(true);
+    });
+
+    it('should pass prop', () => {
+      expect(date.props('utcDate')).toBe(prop.created.date);
+    });
+  });
+
+  describe('reply text', () => {
+    const reply = wrapper.find('.reply__text');
+
+    it('should render reply', () => {
+      expect(reply.exists()).toBe(true);
+    });
+
+    it('should pass reply text as a prop', () => {
+      expect(reply.text()).toBe(prop.replyText);
+    });
+  });
+
+  describe('reply likes', () => {
+    const likes = wrapper.find('.reply__actions');
+
+    it('should render like svg', () => {
+      expect(likes.findComponent(IconWrapper).html()).toContain('</i>');
+    });
+
+    it('should render amount likes from prop', () => {
+      expect(likes.find('.reply__actions-item__count').text()).toBe(String(prop.likes));
+    });
+  });
+});

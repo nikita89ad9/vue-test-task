@@ -1,0 +1,68 @@
+// import { describe, expect, it } from 'vitest';
+
+// import { mount } from '@vue/test-utils';
+
+// import { adminTableContent, adminTableHeaders } from '@pages/Admin/consts';
+// import TestPage from '@/pages/Main/TestPage.vue';
+// import AdminTable from './DataTable.vue';
+
+// describe('DataTable', () => {
+//   const sortValue = '';
+//   const sortOrder = false;
+//   const data = adminTableContent.users;
+
+//   const wrapper = mount(AdminTable, {
+//     props: {
+//       data: data,
+//       headers: adminTableHeaders.users,
+//       sortValue: sortValue,
+//       sortOrder: sortOrder,
+//       modelValue: [],
+//     },
+//     global: {
+//       mocks: {
+//         $t: () => {},
+//       },
+//       components: {
+//         TestPage,
+//       },
+//     },
+//   });
+
+//   it('should render AdminTable component', () => {
+//     expect(wrapper.exists()).toBe(true);
+//   });
+
+//   it('should render proper amount of menu items', () => {
+//     const amountOfItems = wrapper.findAll('.table-body__row');
+//     expect(amountOfItems.length).toBe(data.length);
+
+//     const amountOfColumns = wrapper.findAll('.table-header__cell');
+//     expect(amountOfColumns.length).toBe(adminTableHeaders.users.length + 2);
+//   });
+
+//   it('should emit event with correct value, when selecting table item', async () => {
+//     const checkbox = wrapper.findAll('.checkbox-item__input').at(0);
+//     await checkbox?.trigger('change');
+
+//     await wrapper.vm.$nextTick();
+
+//     const emit = wrapper.emitted('update:modelValue') as unknown[][];
+
+//     expect(wrapper.emitted('update:modelValue')).toBeTruthy();
+//     expect(emit[0]).toStrictEqual([[adminTableContent.users[0]]]);
+//   });
+
+//   it('should emit event with correct value when sorting items', async () => {
+//     const headerCell = wrapper.findAll('.table-header__cell').at(1);
+
+//     await headerCell?.trigger('click');
+
+//     await wrapper.vm.$nextTick();
+
+//     const emit = wrapper.emitted('sortTableItems') as unknown[][];
+
+//     expect(wrapper.emitted('sortTableItems')).toBeTruthy();
+//     expect(emit[0]).toStrictEqual([adminTableHeaders.users[0].key]);
+//   });
+// });

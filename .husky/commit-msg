@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+message="$(cat $1)"
+requiredPattern="(fix|feat|merge|refactor|test): \[LOR-([0-9][0-9][0-9]{0,3})\].*$"
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo "-"
+  echo "-"
+  echo "🚨 Wrong commit message! 😕"
+  echo "The commit message must have this format: (fix|feat): \[LOR-\d{1,3}\].*$"
+  echo "-"
+  echo "For example: feat: [LOR-123] some message"
+  echo "-"
+  echo "Your commit message was:"
+  echo $message
+  exit 1
+fi

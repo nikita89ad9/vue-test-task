@@ -1,0 +1,40 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import { mock } from '@/pages/Article/mock';
+import ArticleRepliesModal from './ArticleRepliesModal.vue';
+import ArticleInput from '../../ArticleInput/ArticleInput.vue';
+import ArticleRepliesItem from '../ArticleRepliesItem/ArticleRepliesItem.vue';
+
+describe('Article replies modal', () => {
+  const wrapper = mount(ArticleRepliesModal, {
+    global: {
+      components: {
+        ArticleRepliesItem,
+        ArticleInput,
+      },
+    },
+    props: {
+      replies: mock.articleComments.content[0].replies,
+      modalState: true,
+    },
+  });
+  const replies = mock.articleComments.content[0].replies;
+
+  it('should render modal', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  describe('replies items', () => {
+    const items = wrapper.findAllComponents(ArticleRepliesItem);
+
+    it('should render proper amount of items', () => {
+      expect(items.length).toBe(replies.length);
+    });
+  });
+
+  it('should render input', () => {
+    expect(wrapper.findComponent(ArticleInput).exists()).toBe(true);
+  });
+});

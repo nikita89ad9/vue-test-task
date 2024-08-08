@@ -1,0 +1,68 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import { recommendedItemMock } from '@/components/RecommendedItem/mock';
+import ArticlePage from './ArticlePage.vue';
+import ArticleComments from '../components/ArticleComments/ArticleComments/ArticleComments.vue';
+import ArticleContent from '../components/ArticleContent/ArticleContent.vue';
+import ArticleRecommendations from '../components/ArticleRecommendations/ArticleRecommendations.vue';
+import { mock } from '../mock';
+
+describe('Article page', () => {
+  const articleData = mock.articleData;
+  const articleComments = mock.articleComments;
+  const recommendationProp = recommendedItemMock;
+  const wrapper = mount(ArticlePage, {
+    global: {
+      components: {
+        ArticleComments,
+        ArticleContent,
+        ArticleRecommendations,
+      },
+    },
+    props: {
+      data: articleData,
+    },
+  });
+
+  it('should render article page', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  describe('article content', () => {
+    const content = wrapper.findComponent(ArticleContent);
+
+    it('should render content component', () => {
+      expect(content.exists()).toBe(true);
+    });
+
+    it('should pass props into component', () => {
+      expect(content.props().data).toStrictEqual(articleData);
+    });
+  });
+
+  describe('article comments', () => {
+    const comments = wrapper.findComponent(ArticleComments);
+
+    it('should render comments component', () => {
+      expect(comments.exists()).toBe(true);
+    });
+
+    it('should pass props into component', () => {
+      expect(comments.props()).toStrictEqual(articleComments);
+    });
+  });
+
+  describe('article recommendations', () => {
+    const recommendations = wrapper.findComponent(ArticleRecommendations);
+
+    it('should render recommendations component', () => {
+      expect(recommendations.exists()).toBe(true);
+    });
+
+    it('should pass props into component', () => {
+      expect(recommendations.props().items).toStrictEqual(recommendationProp);
+    });
+  });
+});

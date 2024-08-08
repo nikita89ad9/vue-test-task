@@ -1,0 +1,18 @@
+import { createPinia, setActivePinia } from 'pinia';
+import { beforeEach, describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import ProfileFavorites from './ProfileFavorites.vue';
+
+describe('HeaderMenu', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia());
+  });
+
+  const wrapper = mount(ProfileFavorites);
+
+  it('should render fav page properly', () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+});

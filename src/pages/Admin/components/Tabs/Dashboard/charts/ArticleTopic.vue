@@ -1,0 +1,23 @@
+<template>
+  <Pie :data="data"></Pie>
+</template>
+
+<script setup lang="ts">
+  import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
+
+  import { computed } from 'vue';
+  import { Pie } from 'vue-chartjs';
+
+  import { articlesTopicData } from '../../stats';
+
+  ChartJS.register(ArcElement, Tooltip, Legend);
+
+  const props = defineProps<{ year: string }>();
+
+  const data = computed(() => {
+    return {
+      ...articlesTopicData,
+      datasets: articlesTopicData.datasets.filter(el => el.label === props.year),
+    };
+  });
+</script>

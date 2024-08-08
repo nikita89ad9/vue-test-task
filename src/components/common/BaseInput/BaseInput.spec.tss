@@ -1,0 +1,69 @@
+import { describe, expect, it } from 'vitest';
+
+import { mount } from '@vue/test-utils';
+
+import { UIUniqid } from '@/utils/UIUniqid';
+import BaseInput from './BaseInput.vue';
+
+describe('BaseInput', () => {
+  it('Label is rendering', () => {
+    const id = UIUniqid();
+    const wrapper = mount(BaseInput, { props: { label: id } });
+    expect(wrapper.text()).toContain(id);
+  });
+
+  it('Renders placeholder in input field', () => {
+    const id = UIUniqid();
+    const wrapper = mount(BaseInput, { props: { placeholder: id } });
+    const input = wrapper.find('.input__field');
+    expect(input.attributes('placeholder')).toBe(id);
+  });
+
+  it('Disables input when disabled prop is true', () => {
+    const wrapper = mount(BaseInput, { props: { disabled: true } });
+    const input = wrapper.find('.input__field').element as HTMLInputElement;
+    expect(input.disabled).toBeTruthy();
+  });
+
+  it('Emits input event on change', () => {
+    const id = UIUniqid();
+    const id2 = UIUniqid();
+    const wrapper = mount(BaseInput, { props: { modelValue: id } });
+    const input = wrapper.find('.input__field');
+    input.setValue(id2);
+    expect(wrapper.emitted('update:modelValue')).toBeTruthy();
+    const emit = wrapper.emitted('update:modelValue') as unknown[][];
+    expect(emit[0]).toEqual([id2]);
+  });
+
+  it('Show error on error prop', () => {
+    const id = UIUniqid();
+    const wrapper = mount(BaseInput, { props: { error: id } });
+    expect(wrapper.text()).toContain(id);
+  });
+
+  it('Become readonly one readonly prop', () => {
+    const wrapper = mount(BaseInput, { props: { readonly: true } });
+    const input = wrapper.find('.input__field').element as HTMLInputElement;
+    expect(input.readOnly).toBeTruthy();
+  });
+
+  it('Names properly on name prop', () => {
+    const id = UIUniqid();
+    const wrapper = mount(BaseInput, { props: { name: id } });
+    const input = wrapper.find('.input__field').element as HTMLInputElement;
+    expect(input.name).toEqual(id);
+  });
+
+  it('Types properlt on type prop', () => {
+    const wrapper = mount(BaseInput, { props: { type: 'text' } });
+    const input = wrapper.find('.input__field').element as HTMLInputElement;
+    expect(input.type).toEqual('text');
+  });
+
+  it('Slot works properly', () => {
+    const id = UIUniqid();
+    const wrapper = mount(BaseInput, { slots: { 'prepend-icon': id } });
+    expect(wrapper.text()).toContain(id);
+  });
+});

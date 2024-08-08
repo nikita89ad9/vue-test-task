@@ -1,0 +1,73 @@
+:root {
+  /* Common */
+  --color-primary: #c63031;
+  --color-primary-hover: #de2e2f;
+  --color-primary-active: #ab0709;
+  --color-secondary: #353535;
+  --color-third: #999;
+  --color-primary-semi-transparent: rgb(198 48 49 / 20%);
+  --color-primary-transparent: rgb(198 48 49 / 50%);
+  --color-black-overlay: rgb(0 0 0 / 60%);
+  --color-success: #4bb543;
+  --color-success-hover: #52c749;
+
+  /* Background */
+  --color-background-primary: #fff;
+  --color-background-secondary: #fafafa;
+  --color-background-third: #fafafa;
+  --color-background-icon: rgb(217 217 217 / 52%);
+  --color-background-chart: trasnparent;
+
+  /* Font */
+  --color-font-primary: #353535;
+  --color-font-secondary: #767676;
+  --color-font-third: #e1e1e1;
+  --color-font-light: #fff;
+  --color-font-black: #000;
+
+  /* Extra */
+  --color-extra-link-primary: #1a73e8;
+  --color-extra-light: #e1e1e1;
+  --color-extra-error: #f00;
+
+  /* Gradient */
+  --color-gradient-primary: linear-gradient(
+    to bottom,
+    var(--color-primary-semi-transparent),
+    var(--color-primary)
+  );
+
+  /* Chart */
+  --color-chart-1: #c63031;
+  --color-chart-2: #d5645a;
+  --color-chart-3: #df8f85;
+  --color-chart-4: #e4b9b2;
+  --color-chart-5: #e2e2e2;
+
+  /* Fill */
+  --color-fill: #353535;
+}
+
+.dark-theme {
+  /* Background */
+  --color-bg-light: #454545;
+  --color-bg-regular: #353535;
+  --color-background-primary: #232323;
+  --color-background-secondary: #161616;
+  --color-background-third: rgb(49 49 49);
+  --color-background-icon: rgb(14 14 14 / 52%);
+  --color-background-chart: rgb(255 255 255 / 75%);
+
+  /* Fonts */
+  --color-font-primary: #dcdcdc;
+  --color-font-secondary: #adadad;
+  --color-font-extra: #222;
+  --color-primary: #dd2525;
+  --color-font-third: rgb(51 51 51);
+
+  /* Extra */
+  --color-extra-light: #444;
+
+  /* Fill */
+  --color-fill: #fff;
+}

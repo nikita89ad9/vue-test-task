@@ -1,0 +1,31 @@
+/* Breakpoints */
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin w-max($breakpoint) {
+  @media (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin w-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin w-max-container($breakpoint) {
+  @container (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin w-min-container($breakpoint) {
+  @container (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

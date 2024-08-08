@@ -1,0 +1,31 @@
+:root {
+  /* Shadows */
+  --widget-shadow: 0px 4px 10px 0px rgb(0 0 0 / 4%);
+  --post-shadow: 0px 16px 16px 0px rgb(0 0 0 / 10%);
+  --container-shadow: 0px 4px 4px 0px rgb(0 0 0 / 4%);
+
+  /* Border */
+  --border-light: 1px solid #e2e2e2;
+  --border-dark: 1px solid rgb(0 0 0 / 30%);
+  --border-darker: 1px solid #000;
+  --border-error: 1px solid var(--color-extra-error);
+  --border-icon: 3px solid #fff;
+  --border-card: 2px solid #d6d6d6;
+  --border-card-active: 2px solid var(--color-primary);
+  --border-toggle-active: 1px solid var(--color-primary);
+
+  /* Animations */
+  --transition-default: 0.1s ease-in;
+  --transition-even: 0.1s all;
+
+  /* Sizes */
+  --header-height: 70px;
+  --sidebar-width: 240px;
+}
+
+.dark-theme {
+  --border-card: 2px solid #a1a1a1;
+  --border-light: 1px solid #444;
+  --border-dark: 1px solid #767676;
+  --border-darker: 1px solid #c1c1c1;
+}
